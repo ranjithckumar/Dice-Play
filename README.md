@@ -1,2 +1,2 @@
-# Dice-Paly
+# Dice-Play
 This is a dice game built using Html, Css and Javascript.
