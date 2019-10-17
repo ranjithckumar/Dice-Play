@@ -1,4 +1,4 @@
-var score,roundScore,activePlayer;
+var scores,roundScore,activePlayer;
 scores=[0,0];
 roundScore=0;
 activePlayer=0;
@@ -29,14 +29,40 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
      }
      else{
         //  Next player
-        activePlayer===0 ? activePlayer=1:activePlayer=0;
-        roundScore=0;
-        document.getElementById('current-0').textContent=0;
-        document.getElementById('current-1').textContent=0;
-        document.querySelector('.player-0-panel').classList.toggle('active');
-        document.querySelector('.player-1-panel').classList.toggle('active');
-        document.querySelector('.dice').style.display='none';
-        // document.querySelector('.player-0-panel').classList.remove('active');
-        // document.querySelector('.player-1-panel').classList.add('active');
+        nextPlayer();
      }
-})
+});
+
+ 
+document.querySelector('.btn-hold').addEventListener('click',function(){
+    // Update score
+      scores[activePlayer]+=roundScore;
+    // Update the UI
+      document.querySelector('#score-'+ activePlayer).textContent=scores[activePlayer];
+    // Check if the player own the game i.e score is reached 100 or not
+     
+    if(scores[activePlayer]>=20)
+    {
+        document.querySelector('#name-'+ activePlayer).textContent='Winner!';
+        document.querySelector('.dice').style.display='none';
+        document.querySelector('.palyer-'+activePlayer +'-panel').classList.add('winner');
+        document.querySelector('.palyer-'+activePlayer +'-panel').classList.remove('active');
+    }
+    else{
+        // Next Player
+    nextPlayer();
+    }
+
+});
+//  Next player function 
+function nextPlayer(){
+   
+    activePlayer===0 ? activePlayer=1:activePlayer=0;
+    roundScore=0;
+    document.getElementById('current-0').textContent=0;
+    document.getElementById('current-1').textContent=0;
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
+    document.querySelector('.dice').style.display='none';
+
+}
