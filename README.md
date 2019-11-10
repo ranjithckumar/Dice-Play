@@ -1,2 +1,8 @@
+## Author
+Ranjith Kumar C
 # Dice-Play
-This is a dice game built by using Html, Css and Javascript.
+This is a dice game where two player can play by spinning the dice. The game is finished when ever the either the palyer score reaches 100. 
+![pic](https://github.com/ranjithckumar/Dice-Play/blob/master/images/Screenshot%20(27).png)
+![pic](https://github.com/ranjithckumar/Dice-Play/blob/master/images/Screenshot%20(26).png)
+# Tools and technologies
+Html,Css,Javascript and Jquery
