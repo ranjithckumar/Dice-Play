@@ -8,5 +8,8 @@ https://ranjithckumar.github.io/Dice-Play/
 # Tools and technologies
 Html,Css,Javascript and Jquery
 
+## Start game
 ![pic](https://github.com/ranjithckumar/Dice-Play/blob/master/images/Screenshot%20(27).png)
+
+## End of game
 ![pic](https://github.com/ranjithckumar/Dice-Play/blob/master/images/Screenshot%20(26).png)
